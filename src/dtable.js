@@ -133,7 +133,7 @@ class DTable {
   }
 
   getRowById(table, rowId) {
-    return table.Id2Row[rowId];
+    return table.id_row_map[rowId];
   }
 
   appendRow(table, rowData) {
