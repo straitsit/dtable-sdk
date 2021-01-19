@@ -1,4 +1,3 @@
-import fs from 'fs';
 import axios from 'axios';
 import FormData from 'form-data';
 import { DTableStore, 
@@ -258,7 +257,7 @@ class DTable {
       let formData = new FormData();
       formData.append('parent_dir', parentPath);
       formData.append('relative_path', relativePath);
-      formData.append('file', fs.createReadStream(filePath));
+      //formData.append('file', fs.createReadStream(filePath));
       formData.getLength((err, length) => {
         if (err) {
           callback(err);
